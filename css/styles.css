@@ -147,27 +147,16 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation__link::after {
+.navigation__link.is-active::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
 
   border-radius: 2px;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0.5);
-}
-
-.navigation__link:hover::after,
-.navigation__link:focus::after,
-.navigation__link:active::after {
   background-color: var(--color-accent);
-  transform: scale(1);
 }
 
 .navigation__link:hover,
