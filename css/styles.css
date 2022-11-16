@@ -27,6 +27,8 @@
   --color-additional-shadow-5: rgba(0, 0, 0, 0.08);
   --color-additional-shadow-6: rgba(0, 0, 0, 0.06);
   --color-additional-shadow-7: rgba(0, 0, 0, 0.16);
+  --color-placeholder-text: rgba(117, 117, 117, 0.5);
+  --color-input-border: rgba(33, 33, 33, 0.2);
   --color-header-border: #ececec;
 
   /* values */
@@ -517,10 +519,6 @@ ul {
   gap: 30px;
 }
 
-.footer__column {
-  margin-right: 70px;
-}
-
 .footer__column:nth-child(2),
 .footer__column:nth-child(3) {
   padding-top: 12px;
@@ -627,6 +625,7 @@ ul {
   box-shadow: 0px 4px 4px var(--color-additional-1-transparent);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 
   transition-property: transform;
   transition-duration: var(--trans-dur);
@@ -731,6 +730,96 @@ ul {
 .modal__icon:hover,
 .modal__icon:focus {
   fill: var(--color-accent);
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.modal__title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.modal__label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--color-main-2);
+}
+
+.modal__input {
+  margin-bottom: 10px;
+  height: 40px;
+
+  border: 1px solid var(--color-input-border);
+  border-radius: 4px;
+}
+
+.modal__txtarea {
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+
+  border: 1px solid var(--color-input-border);
+  border-radius: 4px;
+}
+
+.modal__txtarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--color-placeholder-text);
+}
+
+.modal__input-checkbox-text {
+  text-align: center;
+  margin-bottom: 30px;
+
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-main-2);
+}
+
+.modal__input-checkbox-link {
+  color: var(--color-accent);
+}
+
+.modal__input-checkbox {
+  margin-right: 8px;
+
+  border: 1px solid var(--color-additional-1);
+}
+
+.modal__form-btn-sub {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+
+  background-color: var(--color-accent);
+  box-shadow: 0px 4px 4px var(--color-additional-1-transparent);
+  border-radius: 4px;
+  color: var(--color-main-3);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+  cursor: pointer;
 }
 
 .filter-list__button {
