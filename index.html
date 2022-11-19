@@ -688,28 +688,43 @@
             >Залиште свої дані, ми вам передзвонимо</strong
           >
           <label for="modal__input-name" class="modal__label">Ім'я</label>
-          <input
-            class="modal__input"
-            type="text"
-            name="modal__input-name"
-            id="modal__input-name"
-          />
+          <div class="form-field">
+            <input
+              class="modal__input"
+              type="text"
+              name="modal__input-name"
+              id="modal__input-name"
+            />
+            <svg class="modal__input-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-input-name"></use>
+            </svg>
+          </div>
 
           <label for="modal__input-phone" class="modal__label">Телефон</label>
-          <input
-            class="modal__input"
-            type="tel"
-            name="modal__input-phone"
-            id="modal__input-phone"
-          />
+          <div class="form-field">
+            <input
+              class="modal__input"
+              type="tel"
+              name="modal__input-phone"
+              id="modal__input-phone"
+            />
+            <svg class="modal__input-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-input-phone"></use>
+            </svg>
+          </div>
 
           <label for="modal__input-email" class="modal__label">Пошта</label>
-          <input
-            class="modal__input"
-            type="email"
-            name="modal__input-email"
-            id="modal__input-email"
-          />
+          <div class="form-field">
+            <input
+              class="modal__input"
+              type="email"
+              name="modal__input-email"
+              id="modal__input-email"
+            />
+            <svg class="modal__input-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-input-email"></use>
+            </svg>
+          </div>
 
           <label for="modal__comments" class="modal__label">Коментар</label>
           <textarea
@@ -720,16 +735,16 @@
             cols="30"
             rows="9"
           ></textarea>
-          <p class="modal__input-checkbox-text">
-            <input
-              class="modal__input-checkbox"
-              type="checkbox"
-              name="modal__input-chbox"
-              id="modal__input-chbox"
-            />
-            Погоджуюся з розсилкою та приймаю
-            <a href="" class="modal__input-checkbox-link">Умови договору</a>
-          </p>
+          <label for="modal__input-chbox" class="modal__input-checkbox-text">
+            <div class="checkbox-container">
+              <input class="modal__input-checkbox visualy-hidden" type="checkbox" name="modal__input-chbox" id="modal__input-chbox" />
+              <svg class="modal__checkbox-icon" width="16" height="15">
+                <use class="unchecked" href="./images/icons.svg#icon-checkbox-unchecked"></use>
+                <use class="checked" href="./images/icons.svg#icon-checkbox-checked"></use>
+              </svg>
+              <p class="modal__input-checkbox-text">Погоджуюся з розсилкою та приймаю <a href="" class="modal__input-checkbox-link">Умови договору</a></p>
+            </div>
+          </label>
           <button class="modal__form-btn-sub" type="submit">Відправити</button>
         </form>
       </div>
